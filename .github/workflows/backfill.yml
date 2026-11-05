@@ -1,0 +1,265 @@
+name: Test and backfill
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      start:
+        description: First day (YYYY-MM-DD, Türkiye time)
+        required: true
+        default: '2026-09-01'
+      end:
+        description: Last day (inclusive)
+        required: true
+        default: '2026-10-10'
+      sources:
+        description: Comma-separated source slugs (blank means all)
+        required: false
+      resume_run:
+        description: Previous workflow run ID whose backfill-results artifact should be resumed
+        required: false
+      mode:
+        description: full = every story (slow); quick = per-day cap, news only, parallel jobs; publish = commit resume_run's results to the backfill-data branch
+        required: true
+        default: full
+        type: choice
+        options: [full, quick, publish]
+      per_day:
+        description: Quick mode - stories per publisher per day (0 = no cap)
+        required: false
+        default: '30'
+      per_job:
+        description: Quick mode - publishers per parallel job
+        required: false
+        default: '2'
+      minutes:
+        description: Quick mode - time budget per publisher (minutes, at most 325 so the export step fits the job limit)
+        required: false
+        default: '50'
+      all_sections:
+        description: Quick mode - keep sport, magazine and lifestyle stories too
+        required: false
+        default: false
+        type: boolean
+      to_branch:
+        description: Quick mode - commit each job's compact export to the backfill-data branch instead of uploading databases as artifacts (no artifact storage used)
+        required: false
+        default: false
+        type: boolean
+permissions:
+  contents: read
+  actions: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ['3.11', '3.12']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m unittest -v
+  backfill:
+    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'full'
+    needs: test
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Restore previous checkpoint
+        if: inputs.resume_run != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: backfill-results
+          path: results
+          run-id: ${{ inputs.resume_run }}
+          github-token: ${{ github.token }}
+      - name: Collect historical articles
+        env:
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+          SOURCES: ${{ inputs.sources }}
+        shell: bash
+        run: |
+          mkdir -p results
+          selection=()
+          if [ -n "$SOURCES" ]; then selection=(--only "$SOURCES"); fi
+          python backfill.py --from "$START" --to "$END" "${selection[@]}" \
+            --db results/backfill.sqlite3 --status results/backfill_status.json \
+            >> results/backfill.jsonl
+      - name: Upload results and resumable database
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: backfill-results
+          path: results/
+          if-no-files-found: warn
+          retention-days: 30
+  plan:
+    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'quick'
+    needs: test
+    runs-on: ubuntu-latest
+    outputs:
+      groups: ${{ steps.split.outputs.groups }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: split
+        env:
+          # Blank = every publisher in sources.json.
+          SOURCES: ${{ inputs.sources }}
+          PER_JOB: ${{ inputs.per_job }}
+        run: |
+          python3 - <<'PY' >> "$GITHUB_OUTPUT"
+          import json, os
+          wanted = [s for s in os.environ["SOURCES"].split(",") if s.strip()]
+          if not wanted:
+              wanted = [s["slug"] for s in json.load(open("sources.json"))]
+          n = max(1, int(os.environ["PER_JOB"]))
+          groups = [",".join(wanted[i:i + n]) for i in range(0, len(wanted), n)]
+          print("groups=" + json.dumps(groups))
+          PY
+  collect:
+    needs: plan
+    runs-on: ubuntu-latest
+    timeout-minutes: 350  # GitHub's hosted-runner limit is 360
+    permissions:
+      contents: write
+      actions: read
+    strategy:
+      fail-fast: false
+      max-parallel: 20
+      matrix:
+        group: ${{ fromJson(needs.plan.outputs.groups) }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Restore earlier results
+        if: inputs.resume_run != ''
+        continue-on-error: true
+        uses: actions/download-artifact@v4
+        with:
+          name: backfill-results
+          path: part
+          run-id: ${{ inputs.resume_run }}
+          github-token: ${{ github.token }}
+      - name: Collect
+        env:
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+          GROUP: ${{ matrix.group }}
+          PER_DAY: ${{ inputs.per_day }}
+          MINUTES: ${{ inputs.minutes }}
+          ALL_SECTIONS: ${{ inputs.all_sections }}
+        shell: bash
+        run: |
+          mkdir -p part
+          rm -f part/backfill.jsonl part/backfill_status.json
+          days=$(( ( $(date -d "$END" +%s) - $(date -d "$START" +%s) ) / 86400 + 1 ))
+          sections=(--news-only)
+          if [ "$ALL_SECTIONS" = "true" ]; then sections=(); fi
+          python backfill.py --from "$START" --to "$END" --only "$GROUP" "${sections[@]}" \
+            --per-day "$PER_DAY" --max-pages $(( PER_DAY > 0 ? PER_DAY * days * 3 : 30000 )) \
+            --site-timeout $(( (MINUTES < 325 ? MINUTES : 325) * 60 )) \
+            --db part/backfill.sqlite3 --status part/backfill_status.json > /dev/null || true
+          echo "id=$(echo "$GROUP" | tr ',' '-')" >> "$GITHUB_ENV"
+      - name: Commit compact export to backfill-data
+        if: always() && inputs.to_branch
+        env:
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+          GROUP: ${{ matrix.group }}
+          DEST: data/run-${{ github.run_id }}/parts/${{ env.id }}
+        shell: bash
+        run: |
+          python export_compact.py part /tmp/export "$START" "$END" "$GROUP"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898285+github-actions[bot]@users.noreply.github.com"
+          # Parallel jobs push to one branch; each writes only its own folder, so a retry
+          # after a rejected push only needs a fresh base.
+          for attempt in 1 2 3 4 5 6; do
+            git fetch -q origin backfill-data
+            git checkout -qfB backfill-data origin/backfill-data
+            rm -rf "$DEST" && mkdir -p "$DEST" && cp /tmp/export/* "$DEST"/
+            git add "$DEST" && git commit -qm "Quick export of $GROUP from run $GITHUB_RUN_ID" || exit 0
+            git push -q origin backfill-data && exit 0
+            sleep $(( RANDOM % 20 + 5 ))
+          done
+          exit 1
+      - uses: actions/upload-artifact@v4
+        if: always() && !inputs.to_branch
+        with:
+          name: part-${{ env.id }}
+          path: part/
+          retention-days: 7
+          if-no-files-found: warn
+  merge:
+    needs: [plan, collect]
+    if: always() && needs.plan.result == 'success' && !inputs.to_branch
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: part-*
+          path: parts
+      - run: python3 merge_results.py parts results
+      - uses: actions/upload-artifact@v4
+        with:
+          name: backfill-results
+          path: results/
+          retention-days: 30
+  publish:
+    # Commits a compact export (no article bodies) of a finished run's results to
+    # the backfill-data branch, for tools that can read git but not artifacts.
+    if: github.event_name == 'workflow_dispatch' && inputs.mode == 'publish' && inputs.resume_run != ''
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      actions: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - uses: actions/download-artifact@v4
+        with:
+          name: backfill-results
+          path: results
+          run-id: ${{ inputs.resume_run }}
+          github-token: ${{ github.token }}
+      - name: Export compact dataset
+        env:
+          RUN: ${{ inputs.resume_run }}
+          START: ${{ inputs.start }}
+          END: ${{ inputs.end }}
+        run: python export_compact.py results "data/run-$RUN" "$START" "$END"
+      - name: Commit to backfill-data branch
+        env:
+          RUN: ${{ inputs.resume_run }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898285+github-actions[bot]@users.noreply.github.com"
+          mv data /tmp/export
+          git fetch origin backfill-data || true
+          if git rev-parse --verify origin/backfill-data >/dev/null 2>&1; then
+            git checkout -B backfill-data origin/backfill-data
+          else
+            git checkout --orphan backfill-data && git rm -rqf .
+          fi
+          mkdir -p data && rm -rf "data/run-$RUN" && cp -r "/tmp/export/run-$RUN" data/
+          git add data && git commit -qm "Backfill export from run $RUN" && git push origin backfill-data

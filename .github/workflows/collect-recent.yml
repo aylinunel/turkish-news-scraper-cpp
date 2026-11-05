@@ -1,0 +1,83 @@
+name: Collect recent stories
+
+# Every six hours: the last two days (Türkiye time) from every registered publisher, through
+# the robots-aware backfill (news sitemaps, registry sitemaps and feeds). Feeds only hold recent
+# items, so this keeps feed-only publishers covered going forward. Results are committed as a
+# compact export to the backfill-data branch; repeated stories are removed downstream by URL.
+# The database is carried between runs in the Actions cache, so each run only downloads article
+# pages it has not stored yet instead of re-reading the whole two-day window.
+# Each commit holds only the stories new in that run.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: collect-recent
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150  # 53 publishers, 12 at a time, up to 15 min each, plus the commit
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - name: Restore the previous run's database
+        uses: actions/cache/restore@v4
+        with:
+          path: part/backfill.sqlite3
+          key: recent-db-${{ github.run_id }}
+          restore-keys: recent-db-
+      - name: Collect the last two days
+        shell: bash
+        run: |
+          END=$(TZ=Europe/Istanbul date +%F); START=$(TZ=Europe/Istanbul date -d yesterday +%F)
+          echo "START=$START" >> "$GITHUB_ENV"; echo "END=$END" >> "$GITHUB_ENV"
+          mkdir -p part
+          echo "SINCE=$(date -u +%FT%T)" >> "$GITHUB_ENV"
+          python backfill.py --from "$START" --to "$END" --site-timeout 900 \
+            --db part/backfill.sqlite3 --status part/backfill_status.json > /dev/null || true
+      - name: Commit compact export to backfill-data
+        shell: bash
+        run: |
+          python export_compact.py part /tmp/export "$START" "$END" "" "$SINCE"
+          DEST="data/recent/$(date -u +%Y%m%dT%H%M)-$GITHUB_RUN_ID"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898285+github-actions[bot]@users.noreply.github.com"
+          for attempt in 1 2 3 4 5 6; do
+            git fetch -q origin backfill-data
+            git checkout -qfB backfill-data origin/backfill-data
+            mkdir -p "$DEST" && cp /tmp/export/* "$DEST"/
+            git add "$DEST" && git commit -qm "Recent stories $START to $END (run $GITHUB_RUN_ID)" || exit 0
+            git push -q origin backfill-data && exit 0
+            sleep $(( RANDOM % 20 + 5 ))
+          done
+          exit 1
+      # Saved only after a successful commit, so a failed run's stories are collected again next time.
+      - name: Keep only the last week in the database
+        shell: bash
+        run: |
+          [ -f part/backfill.sqlite3 ] || exit 0
+          python - <<'PY'
+          import sqlite3
+          from datetime import datetime, timedelta, timezone
+          cutoff = (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()
+          db = sqlite3.connect("part/backfill.sqlite3")
+          db.execute("PRAGMA wal_checkpoint(TRUNCATE)")
+          db.execute("DELETE FROM articles WHERE fetched_at < ?", (cutoff,))
+          db.execute("DELETE FROM backfill_checked WHERE end < ?", (cutoff[:10],))
+          db.commit()
+          db.execute("VACUUM")
+          db.close()
+          PY
+      - name: Save the database for the next run
+        uses: actions/cache/save@v4
+        with:
+          path: part/backfill.sqlite3
+          key: recent-db-${{ github.run_id }}

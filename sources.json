@@ -1,0 +1,546 @@
+[
+  {
+    "name": "Hürriyet",
+    "slug": "hurriyet",
+    "url": "https://www.hurriyet.com.tr",
+    "feeds": [
+      "https://www.hurriyet.com.tr/rss/gundem",
+      "https://www.hurriyet.com.tr/rss/egitim",
+      "https://www.hurriyet.com.tr/rss/dunya",
+      "https://www.hurriyet.com.tr/rss/yazarlar",
+      "https://www.hurriyet.com.tr/rss/ekonomi",
+      "https://www.hurriyet.com.tr/rss/siyaset"
+    ]
+  },
+  {
+    "name": "Mynet",
+    "slug": "mynet",
+    "url": "https://www.mynet.com",
+    "feeds": [
+      "https://www.mynet.com/rss/publisher-anasayfa.rss"
+    ],
+    "sitemaps": [
+      "https://www.mynet.com/sitemaps/news/GoogleNews.xml"
+    ]
+  },
+  {
+    "name": "Sabah",
+    "slug": "sabah",
+    "url": "https://www.sabah.com.tr",
+    "feeds": [
+      "https://www.sabah.com.tr/rss/dunya.xml",
+      "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "https://www.sabah.com.tr/rss/gundem.xml",
+      "https://www.sabah.com.tr/rss/egitim.xml",
+      "https://www.sabah.com.tr/rss/kultur-sanat.xml",
+      "https://www.sabah.com.tr/rss/yazarlar.xml"
+    ],
+    "sitemaps": [
+      "https://www.sabah.com.tr/sitemap/news.xml"
+    ]
+  },
+  {
+    "name": "Milliyet",
+    "slug": "milliyet",
+    "url": "https://www.milliyet.com.tr",
+    "feeds": [
+      "https://www.milliyet.com.tr/rss/rssnew/yazarlarrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/teknolojirss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/dunyarss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/gundemrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/egitimrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/ekonomirss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/kitaprss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/kultursanatrss.xml",
+      "https://www.milliyet.com.tr/rss/rssnew/siyasetrss.xml"
+    ]
+  },
+  {
+    "name": "Sözcü",
+    "slug": "sozcu",
+    "url": "https://www.sozcu.com.tr",
+    "feeds": [
+      "https://www.sozcu.com.tr/feeds-rss-category-dunya",
+      "https://www.sozcu.com.tr/feeds-rss-category-ekonomi",
+      "https://www.sozcu.com.tr/feeds-rss-category-gundem",
+      "https://www.sozcu.com.tr/feeds-rss-category-egitim"
+    ],
+    "sitemaps": [
+      "https://www.sozcu.com.tr/feeds/sitemapgooglenews"
+    ]
+  },
+  {
+    "name": "Sondakika.com",
+    "slug": "sondakika",
+    "url": "https://www.sondakika.com",
+    "feeds": [],
+    "sitemaps": [
+      "https://www.sondakika.com/sitemaps/sitemap_google_news.aspx"
+    ]
+  },
+  {
+    "name": "Habertürk",
+    "slug": "haberturk",
+    "url": "https://www.haberturk.com",
+    "feeds": [
+      "https://www.haberturk.com/rss",
+      "https://www.haberturk.com/rss/dunya.xml",
+      "https://www.haberturk.com/rss/ekonomi.xml",
+      "https://www.haberturk.com/rss/gundem.xml",
+      "https://www.haberturk.com/rss/kultur-sanat.xml",
+      "https://www.haberturk.com/rss/siyaset.xml",
+      "https://www.haberturk.com/rss/yazarlar.xml"
+    ],
+    "sitemaps": [
+      "https://www.haberturk.com/sitemap.xml"
+    ]
+  },
+  {
+    "name": "Halk TV",
+    "slug": "halktv",
+    "url": "https://halktv.com.tr",
+    "feeds": [
+      "https://halktv.com.tr/rss"
+    ]
+  },
+  {
+    "name": "Onedio",
+    "slug": "onedio",
+    "url": "https://onedio.com",
+    "feeds": [
+      "https://onedio.com/Publisher/publisher-daily.rss"
+    ],
+    "sitemaps": [
+      "https://onedio.com/siteMapNews.xml"
+    ]
+  },
+  {
+    "name": "BirGün",
+    "slug": "birgun",
+    "url": "https://www.birgun.net",
+    "feeds": [
+      "https://www.birgun.net/rss/kategori/siyaset-8"
+    ],
+    "sitemaps": [
+      "https://www.birgun.net/sitemap/haberler"
+    ]
+  },
+  {
+    "name": "T24",
+    "slug": "t24",
+    "url": "https://t24.com.tr",
+    "feeds": [
+      "https://t24.com.tr/rss"
+    ]
+  },
+  {
+    "name": "NTV",
+    "slug": "ntv",
+    "url": "https://www.ntv.com.tr",
+    "feeds": [
+      "https://www.ntv.com.tr/gundem.rss",
+      "https://www.ntv.com.tr/dunya.rss",
+      "https://www.ntv.com.tr/egitim.rss",
+      "https://www.ntv.com.tr/ekonomi.rss",
+      "https://www.ntv.com.tr/saglik.rss",
+      "https://www.ntv.com.tr/teknoloji.rss"
+    ]
+  },
+  {
+    "name": "Karar",
+    "slug": "karar",
+    "url": "https://www.karar.com",
+    "feeds": [
+      "https://www.karar.com/service/rss.php"
+    ]
+  },
+  {
+    "name": "Memurlar.net",
+    "slug": "memurlar",
+    "url": "https://www.memurlar.net",
+    "feeds": []
+  },
+  {
+    "name": "Yeni Şafak",
+    "slug": "yenisafak",
+    "url": "https://www.yenisafak.com",
+    "feeds": [
+      "https://www.yenisafak.com/rss?xml=gundem",
+      "https://www.yenisafak.com/rss?xml=dunya",
+      "https://www.yenisafak.com/rss?xml=egitim",
+      "https://www.yenisafak.com/rss?xml=ekonomi",
+      "https://www.yenisafak.com/rss?xml=kultur-sanat",
+      "https://www.yenisafak.com/rss?xml=siyaset",
+      "https://www.yenisafak.com/rss?xml=yazarlar"
+    ],
+    "sitemaps": [
+      "https://www.yenisafak.com/sitemap/news-sitemap"
+    ]
+  },
+  {
+    "name": "Haber7",
+    "slug": "haber7",
+    "url": "https://www.haber7.com",
+    "feeds": [
+      "https://i12.haber7.net/sondakika/newsstand/latest.xml"
+    ]
+  },
+  {
+    "name": "Bloomberg HT",
+    "slug": "bloomberght",
+    "url": "https://www.bloomberght.com",
+    "feeds": [],
+    "sitemaps": [
+      "https://www.bloomberght.com/sitemap_google_news.xml"
+    ]
+  },
+  {
+    "name": "CNN Türk",
+    "slug": "cnnturk",
+    "url": "https://www.cnnturk.com",
+    "feeds": [
+      "https://www.cnnturk.com/feed/rss/all/news",
+      "https://www.cnnturk.com/feed/rss/dunya/news",
+      "https://www.cnnturk.com/feed/rss/ekonomi/news",
+      "https://www.cnnturk.com/feed/rss/yazarlar"
+    ]
+  },
+  {
+    "name": "Yeni Akit",
+    "slug": "akit",
+    "url": "https://www.yeniakit.com.tr",
+    "feeds": [
+      "https://www.yeniakit.com.tr/rss/haber/dunya",
+      "https://www.yeniakit.com.tr/rss/haber/ekonomi",
+      "https://www.yeniakit.com.tr/rss/haber/gundem",
+      "https://www.yeniakit.com.tr/rss/haber/siyaset",
+      "https://www.yeniakit.com.tr/rss/haber/medya"
+    ],
+    "sitemaps": [
+      "https://www.yeniakit.com.tr/sitemap_google_news.php"
+    ]
+  },
+  {
+    "name": "İnternet Haber",
+    "slug": "internethaber",
+    "url": "https://www.internethaber.com",
+    "feeds": []
+  },
+  {
+    "name": "Anadolu Ajansı",
+    "slug": "aa",
+    "url": "https://www.aa.com.tr",
+    "feeds": [
+      "https://www.aa.com.tr/tr/rss/default?cat=guncel"
+    ],
+    "sitemaps": [
+      "https://www.aa.com.tr/tr/Sitemap/index"
+    ]
+  },
+  {
+    "name": "TV100",
+    "slug": "tv100",
+    "url": "https://www.tv100.com",
+    "feeds": [
+      "https://www.tv100.com/export/rss/dunya",
+      "https://www.tv100.com/export/rss/ekonomia",
+      "https://www.tv100.com/export/rss/siyaset",
+      "https://www.tv100.com/export/rss/yazarlar",
+      "https://www.tv100.com/export/rss/egitim",
+      "https://www.tv100.com/rss"
+    ]
+  },
+  {
+    "name": "Ekonomim",
+    "slug": "ekonomim",
+    "url": "https://www.ekonomim.com",
+    "feeds": []
+  },
+  {
+    "name": "Nefes",
+    "slug": "nefes",
+    "url": "https://www.nefes.com.tr",
+    "feeds": []
+  },
+  {
+    "name": "Diken",
+    "slug": "diken",
+    "url": "https://www.diken.com.tr",
+    "feeds": [
+      "https://www.diken.com.tr/kategori/dunya/feed/",
+      "https://www.diken.com.tr/kategori/ekonomi/feed/",
+      "https://www.diken.com.tr/feed/",
+      "https://www.diken.com.tr/kategori/surdurulebilirlik/feed/",
+      "https://www.diken.com.tr/kategori/agora/feed/",
+      "https://www.diken.com.tr/kategori/analiz/feed/",
+      "https://www.diken.com.tr/kategori/medya/feed/"
+    ],
+    "sitemaps": [
+      "https://www.diken.com.tr/news-sitemap.xml"
+    ]
+  },
+  {
+    "name": "TRT Haber",
+    "slug": "trthaber",
+    "url": "https://www.trthaber.com",
+    "feeds": [
+      "https://www.trthaber.com/sondakika.rss",
+      "https://www.trthaber.com/manset.rss",
+      "https://www.trthaber.com/rss",
+      "https://www.trthaber.com/rss.html",
+      "https://www.trthaber.com/ekonomi.rss",
+      "https://www.trthaber.com/dunya.rss",
+      "https://www.trthaber.com/gundem.rss"
+    ],
+    "sitemaps": [
+      "https://www.trthaber.com/sitemap_haber.xml"
+    ]
+  },
+  {
+    "name": "Cumhuriyet",
+    "slug": "cumhuriyet",
+    "url": "https://www.cumhuriyet.com.tr",
+    "feeds": [
+      "https://www.cumhuriyet.com.tr/rss/son_dakika.xml",
+      "https://www.cumhuriyet.com.tr/rss/ekonomi.xml",
+      "https://www.cumhuriyet.com.tr/rss/dunya.xml",
+      "https://www.cumhuriyet.com.tr/rss/siyaset.xml",
+      "https://www.cumhuriyet.com.tr/rss/turkiye.xml",
+      "https://www.cumhuriyet.com.tr/rss/yazarlar.xml"
+    ],
+    "sitemaps": [
+      "https://www.cumhuriyet.com.tr/sitemaps/news.xml"
+    ]
+  },
+  {
+    "name": "En Son Haber",
+    "slug": "ensonhaber",
+    "url": "https://www.ensonhaber.com",
+    "feeds": [
+      "https://www.ensonhaber.com/rss/ensonhaber.xml",
+      "https://www.ensonhaber.com/rss/dunya.xml",
+      "https://www.ensonhaber.com/rss/ekonomi.xml",
+      "https://www.ensonhaber.com/rss/medya.xml",
+      "https://www.ensonhaber.com/rss/politika.xml",
+      "https://www.ensonhaber.com/rss/teknoloji.xml"
+    ]
+  },
+  {
+    "name": "Akşam",
+    "slug": "aksam",
+    "url": "https://www.aksam.com.tr",
+    "feeds": [],
+    "sitemaps": [
+      "https://www.aksam.com.tr/xml/HaberSiteMap.xml"
+    ]
+  },
+  {
+    "name": "Posta",
+    "slug": "posta",
+    "url": "https://www.posta.com.tr",
+    "feeds": []
+  },
+  {
+    "name": "Haber Global",
+    "slug": "haberglobal",
+    "url": "https://haberglobal.com.tr",
+    "feeds": []
+  },
+  {
+    "name": "Oda TV",
+    "slug": "odatv",
+    "url": "https://www.odatv.com",
+    "feeds": []
+  },
+  {
+    "name": "Gerçek Gündem",
+    "slug": "gercekgundem",
+    "url": "https://www.gercekgundem.com",
+    "feeds": [
+      "https://www.gercekgundem.com/rss",
+      "https://www.gercekgundem.com/rss/dunya",
+      "https://www.gercekgundem.com/rss/ekonomi",
+      "https://www.gercekgundem.com/rss/yazarlar",
+      "https://www.gercekgundem.com/rss/siyaset",
+      "https://www.gercekgundem.com/rss/medya"
+    ]
+  },
+  {
+    "name": "Takvim",
+    "slug": "takvim",
+    "url": "https://www.takvim.com.tr",
+    "feeds": [
+      "https://www.takvim.com.tr/rss/anasayfa.xml"
+    ],
+    "sitemaps": [
+      "https://www.takvim.com.tr/sitemap/news.xml"
+    ]
+  },
+  {
+    "name": "A Haber",
+    "slug": "ahaber",
+    "url": "https://www.ahaber.com.tr",
+    "feeds": [
+      "https://www.ahaber.com.tr/rss/gundem.xml",
+      "https://www.ahaber.com.tr/rss/yazarlar.xml",
+      "https://www.ahaber.com.tr/rss/dunya.xml",
+      "https://www.ahaber.com.tr/rss/ekonomi.xml",
+      "https://www.ahaber.com.tr/rss/saglik.xml",
+      "https://www.ahaber.com.tr/rss/kultur-sanat.xml"
+    ],
+    "sitemaps": [
+      "https://www.ahaber.com.tr/sitemap/index.xml"
+    ]
+  },
+  {
+    "name": "Aydınlık",
+    "slug": "aydinlik",
+    "url": "https://www.aydinlik.com.tr",
+    "feeds": [
+      "https://www.aydinlik.com.tr/rss"
+    ]
+  },
+  {
+    "name": "Star",
+    "slug": "star",
+    "url": "https://www.star.com.tr",
+    "feeds": [
+      "https://www.star.com.tr/rss/dunya.xml",
+      "https://www.star.com.tr/rss/ekonomi.xml",
+      "https://www.star.com.tr/rss/guncel.xml",
+      "https://www.star.com.tr/rss/spor.xml",
+      "https://www.star.com.tr/rss/saglik.xml",
+      "https://www.star.com.tr/rss/kultur-sanat.xml",
+      "https://www.star.com.tr/rss/yazarlar.xml"
+    ],
+    "sitemaps": [
+      "https://www.star.com.tr/sitemap-news.asp"
+    ]
+  },
+  {
+    "name": "TGRT Haber",
+    "slug": "tgrt",
+    "url": "https://www.tgrthaber.com",
+    "feeds": [
+      "https://www.tgrthaber.com/rss/manset"
+    ],
+    "sitemaps": [
+      "https://www.tgrthaber.com/sitemap/google-news-sitemap"
+    ]
+  },
+  {
+    "name": "Dünya",
+    "slug": "dunya",
+    "url": "https://www.dunya.com",
+    "feeds": []
+  },
+  {
+    "name": "Türkiye Gazetesi",
+    "slug": "turkiyegz",
+    "url": "https://www.turkiyegazetesi.com.tr",
+    "feeds": [
+      "https://www.turkiyegazetesi.com.tr/rss"
+    ],
+    "sitemaps": [
+      "https://www.turkiyegazetesi.com.tr/sitemap/google-news-sitemap"
+    ]
+  },
+  {
+    "name": "Oksijen",
+    "slug": "oksijen",
+    "url": "https://gazeteoksijen.com",
+    "feeds": []
+  },
+  {
+    "name": "F5Haber",
+    "slug": "f5haber",
+    "url": "https://www.f5haber.com",
+    "feeds": []
+  },
+  {
+    "name": "Haberler.com",
+    "slug": "haberler",
+    "url": "https://www.haberler.com",
+    "feeds": [],
+    "sitemaps": [
+      "https://www.haberler.com/sitemap_google_news.xml"
+    ]
+  },
+  {
+    "name": "Milli Gazete",
+    "slug": "milligazete",
+    "url": "https://www.milligazete.com.tr",
+    "feeds": [
+      "https://www.milligazete.com.tr/rss",
+      "https://www.milligazete.com.tr/rss/<category>.xml"
+    ],
+    "sitemaps": [
+      "https://www.milligazete.com.tr/sitemap.xml"
+    ]
+  },
+  {
+    "name": "Vatan",
+    "slug": "vatan",
+    "url": "https://www.gazetevatan.com",
+    "feeds": []
+  },
+  {
+    "name": "Diriliş Postası",
+    "slug": "dirilis",
+    "url": "https://www.dirilispostasi.com",
+    "feeds": [],
+    "sitemaps": [
+      "https://www.dirilispostasi.com/sitemap.xml"
+    ]
+  },
+  {
+    "name": "Yeni Asya",
+    "slug": "yeniasya",
+    "url": "https://www.yeniasya.com.tr",
+    "feeds": [
+      "https://www.yeniasya.com.tr/rss/son-dakika"
+    ]
+  },
+  {
+    "name": "Artı Gerçek",
+    "slug": "artigercek",
+    "url": "https://artigercek.com",
+    "feeds": []
+  },
+  {
+    "name": "Demirören Haber Ajansı",
+    "slug": "dha",
+    "url": "https://www.dha.com.tr",
+    "feeds": []
+  },
+  {
+    "name": "Yeni Çağ",
+    "slug": "yenicag",
+    "url": "https://www.yenicaggazetesi.com",
+    "feeds": [
+      "https://www.yenicaggazetesi.com/export/rss/dunya",
+      "https://www.yenicaggazetesi.com/export/rss"
+    ]
+  },
+  {
+    "name": "Instacp",
+    "slug": "instacp",
+    "url": "https://www.instacp.com",
+    "feeds": []
+  },
+  {
+    "name": "GazetelerdeBugün",
+    "slug": "gazetelerdebugun",
+    "url": "https://www.gazetelerdebugun.com",
+    "feeds": []
+  },
+  {
+    "name": "TELE1",
+    "slug": "tele1",
+    "url": "https://www.tele1.com.tr",
+    "feeds": [],
+    "sitemaps": [
+      "https://www.tele1.com.tr/sitemap.xml"
+    ]
+  }
+]

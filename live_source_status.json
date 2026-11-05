@@ -1,0 +1,1004 @@
+{
+  "checked_at": "2026-10-12T19:39:18.831580+00:00",
+  "sources": [
+    {
+      "source": "hurriyet",
+      "name": "Hürriyet",
+      "url": "https://www.hurriyet.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428254+00:00",
+      "status": "ok",
+      "found": 532,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 26.64
+    },
+    {
+      "source": "mynet",
+      "name": "Mynet",
+      "url": "https://www.mynet.com/",
+      "checked_at": "2026-10-12T19:37:27.428447+00:00",
+      "status": "ok",
+      "found": 47,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 18.47
+    },
+    {
+      "source": "sabah",
+      "name": "Sabah",
+      "url": "https://www.sabah.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428498+00:00",
+      "status": "ok",
+      "found": 63,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 26.42
+    },
+    {
+      "source": "milliyet",
+      "name": "Milliyet",
+      "url": "https://www.milliyet.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428537+00:00",
+      "status": "ok",
+      "found": 210,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.milliyet.com.tr/rss/rssnew/egitimrss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.milliyet.com.tr/rss/rssnew/egitimrss.xml'"
+        },
+        {
+          "url": "https://www.milliyet.com.tr/rss/rssnew/kultursanatrss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.milliyet.com.tr/rss/rssnew/kultursanatrss.xml'"
+        }
+      ],
+      "seconds": 37.57
+    },
+    {
+      "source": "sozcu",
+      "name": "Sözcü",
+      "url": "https://www.sozcu.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428563+00:00",
+      "status": "ok",
+      "found": 200,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 22.55
+    },
+    {
+      "source": "sondakika",
+      "name": "Sondakika.com",
+      "url": "https://www.sondakika.com/",
+      "checked_at": "2026-10-12T19:37:27.428585+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "http://rss.sondakika.com/rss.asp",
+          "error": "TimeoutError: "
+        },
+        {
+          "url": "https://www.sondakika.com/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.sondakika.com/feed/'"
+        }
+      ],
+      "seconds": 75.18
+    },
+    {
+      "source": "haberturk",
+      "name": "Habertürk",
+      "url": "https://www.haberturk.com/",
+      "checked_at": "2026-10-12T19:37:27.428609+00:00",
+      "status": "ok",
+      "found": 211,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 27.8
+    },
+    {
+      "source": "halktv",
+      "name": "Halk TV",
+      "url": "https://halktv.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428627+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 15.07
+    },
+    {
+      "source": "onedio",
+      "name": "Onedio",
+      "url": "https://onedio.com/",
+      "checked_at": "2026-10-12T19:37:27.428645+00:00",
+      "status": "ok",
+      "found": 207,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 17.77
+    },
+    {
+      "source": "birgun",
+      "name": "BirGün",
+      "url": "https://www.birgun.net/",
+      "checked_at": "2026-10-12T19:37:27.428666+00:00",
+      "status": "ok",
+      "found": 151,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 5.15
+    },
+    {
+      "source": "t24",
+      "name": "T24",
+      "url": "https://t24.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428685+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://t24.com.tr/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://t24.com.tr/rss.xml'"
+        },
+        {
+          "url": "https://t24.com.tr/rss/anasayfa.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://t24.com.tr/rss/anasayfa.xml'"
+        }
+      ],
+      "seconds": 31.34
+    },
+    {
+      "source": "ntv",
+      "name": "NTV",
+      "url": "https://www.ntv.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428702+00:00",
+      "status": "ok",
+      "found": 119,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 27.19
+    },
+    {
+      "source": "karar",
+      "name": "Karar",
+      "url": "https://www.karar.com/",
+      "checked_at": "2026-10-12T19:37:27.428721+00:00",
+      "status": "ok",
+      "found": 40,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 5.66
+    },
+    {
+      "source": "memurlar",
+      "name": "Memurlar.net",
+      "url": "https://www.memurlar.net/",
+      "checked_at": "2026-10-12T19:37:27.428736+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.memurlar.net/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.memurlar.net/rss'"
+        },
+        {
+          "url": "https://www.memurlar.net/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.memurlar.net/feed/'"
+        },
+        {
+          "url": "https://www.memurlar.net/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.memurlar.net/rss.xml'"
+        },
+        {
+          "url": "https://www.memurlar.net/rss/anasayfa.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.memurlar.net/rss/anasayfa.xml'"
+        },
+        {
+          "url": "https://www.memurlar.net/haber/1180734/sigortam-net-app-e-ozel-kasko-notum-ile-10-000-tl-ye-varan-indirim.html",
+          "error": "TimeoutError: "
+        }
+      ],
+      "seconds": 57.18
+    },
+    {
+      "source": "yenisafak",
+      "name": "Yeni Şafak",
+      "url": "https://www.yenisafak.com/",
+      "checked_at": "2026-10-12T19:37:27.428756+00:00",
+      "status": "ok",
+      "found": 179,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 44.81
+    },
+    {
+      "source": "haber7",
+      "name": "Haber7",
+      "url": "https://www.haber7.com/",
+      "checked_at": "2026-10-12T19:37:27.428784+00:00",
+      "status": "ok",
+      "found": 95,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 3.78
+    },
+    {
+      "source": "bloomberght",
+      "name": "Bloomberg HT",
+      "url": "https://www.bloomberght.com/",
+      "checked_at": "2026-10-12T19:37:27.428800+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 21.46
+    },
+    {
+      "source": "cnnturk",
+      "name": "CNN Türk",
+      "url": "https://www.cnnturk.com/",
+      "checked_at": "2026-10-12T19:37:27.428820+00:00",
+      "status": "ok",
+      "found": 132,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 22.69
+    },
+    {
+      "source": "akit",
+      "name": "Yeni Akit",
+      "url": "https://www.yeniakit.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428834+00:00",
+      "status": "ok",
+      "found": 200,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 26.12
+    },
+    {
+      "source": "internethaber",
+      "name": "İnternet Haber",
+      "url": "https://www.internethaber.com/",
+      "checked_at": "2026-10-12T19:37:27.428852+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 18.77
+    },
+    {
+      "source": "aa",
+      "name": "Anadolu Ajansı",
+      "url": "https://www.aa.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428872+00:00",
+      "status": "no_articles",
+      "found": 0,
+      "new": 0,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.aa.com.tr/rss",
+          "error": "TimeoutError: "
+        }
+      ],
+      "seconds": 44.36
+    },
+    {
+      "source": "tv100",
+      "name": "TV100",
+      "url": "https://www.tv100.com/",
+      "checked_at": "2026-10-12T19:37:27.428889+00:00",
+      "status": "ok",
+      "found": 241,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.tv100.com/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.tv100.com/rss'"
+        }
+      ],
+      "seconds": 27.16
+    },
+    {
+      "source": "ekonomim",
+      "name": "Ekonomim",
+      "url": "https://www.ekonomim.com/",
+      "checked_at": "2026-10-12T19:37:27.428904+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 19.7
+    },
+    {
+      "source": "nefes",
+      "name": "Nefes",
+      "url": "https://www.nefes.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428925+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.nefes.com.tr/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.nefes.com.tr/rss'"
+        },
+        {
+          "url": "https://www.nefes.com.tr/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.nefes.com.tr/feed'"
+        },
+        {
+          "url": "https://www.nefes.com.tr/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.nefes.com.tr/rss.xml'"
+        },
+        {
+          "url": "https://www.nefes.com.tr/rss/anasayfa.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.nefes.com.tr/rss/anasayfa.xml'"
+        }
+      ],
+      "seconds": 39.19
+    },
+    {
+      "source": "diken",
+      "name": "Diken",
+      "url": "https://www.diken.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428940+00:00",
+      "status": "ok",
+      "found": 205,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 27.22
+    },
+    {
+      "source": "trthaber",
+      "name": "TRT Haber",
+      "url": "https://www.trthaber.com/",
+      "checked_at": "2026-10-12T19:37:27.428955+00:00",
+      "status": "ok",
+      "found": 95,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.trthaber.com/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.trthaber.com/rss'"
+        },
+        {
+          "url": "https://www.trthaber.com/rss.html",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.trthaber.com/rss.html'"
+        },
+        {
+          "url": "https://www.trthaber.com/ekonomi.rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.trthaber.com/ekonomi.rss'"
+        },
+        {
+          "url": "https://www.trthaber.com/dunya.rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.trthaber.com/dunya.rss'"
+        },
+        {
+          "url": "https://www.trthaber.com/gundem.rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.trthaber.com/gundem.rss'"
+        }
+      ],
+      "seconds": 34.5
+    },
+    {
+      "source": "cumhuriyet",
+      "name": "Cumhuriyet",
+      "url": "https://www.cumhuriyet.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.428971+00:00",
+      "status": "ok",
+      "found": 543,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 26.92
+    },
+    {
+      "source": "ensonhaber",
+      "name": "En Son Haber",
+      "url": "https://www.ensonhaber.com/",
+      "checked_at": "2026-10-12T19:37:27.428985+00:00",
+      "status": "ok",
+      "found": 300,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 27.16
+    },
+    {
+      "source": "aksam",
+      "name": "Akşam",
+      "url": "https://www.aksam.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429404+00:00",
+      "status": "ok",
+      "found": 20,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 25.56
+    },
+    {
+      "source": "posta",
+      "name": "Posta",
+      "url": "https://www.posta.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429433+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.posta.com.tr/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.posta.com.tr/feed/'"
+        },
+        {
+          "url": "https://www.posta.com.tr/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.posta.com.tr/rss.xml'"
+        }
+      ],
+      "seconds": 37.65
+    },
+    {
+      "source": "haberglobal",
+      "name": "Haber Global",
+      "url": "https://haberglobal.com/",
+      "checked_at": "2026-10-12T19:37:27.429458+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 20.13
+    },
+    {
+      "source": "odatv",
+      "name": "Oda TV",
+      "url": "https://www.odatv.com/",
+      "checked_at": "2026-10-12T19:37:27.429537+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 20.27
+    },
+    {
+      "source": "gercekgundem",
+      "name": "Gerçek Gündem",
+      "url": "https://www.gercekgundem.com/",
+      "checked_at": "2026-10-12T19:37:27.429563+00:00",
+      "status": "ok",
+      "found": 292,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 29.0
+    },
+    {
+      "source": "takvim",
+      "name": "Takvim",
+      "url": "https://www.takvim.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429582+00:00",
+      "status": "ok",
+      "found": 100,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 13.81
+    },
+    {
+      "source": "ahaber",
+      "name": "A Haber",
+      "url": "https://www.ahaber.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429595+00:00",
+      "status": "ok",
+      "found": 485,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.ahaber.com.tr/rss/kultur-sanat.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.ahaber.com.tr/rss/kultur-sanat.xml'"
+        }
+      ],
+      "seconds": 26.98
+    },
+    {
+      "source": "aydinlik",
+      "name": "Aydınlık",
+      "url": "https://www.aydinlik.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429607+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 15.25
+    },
+    {
+      "source": "star",
+      "name": "Star",
+      "url": "https://www.star.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429619+00:00",
+      "status": "ok",
+      "found": 20,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.star.com.tr/rss/dunya.xml",
+          "error": "TimeoutError: "
+        },
+        {
+          "url": "https://www.star.com.tr/rss/spor.xml",
+          "error": "TimeoutError: "
+        },
+        {
+          "url": "https://www.star.com.tr/rss/saglik.xml",
+          "error": "TimeoutError: "
+        },
+        {
+          "url": "https://www.star.com.tr/rss/kultur-sanat.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.star.com.tr/rss/kultur-sanat.xml'"
+        },
+        {
+          "url": "https://www.star.com.tr/rss/yazarlar.xml",
+          "error": "TimeoutError: "
+        }
+      ],
+      "seconds": 111.4
+    },
+    {
+      "source": "tgrt",
+      "name": "TGRT Haber",
+      "url": "https://www.tgrthaber.com/",
+      "checked_at": "2026-10-12T19:37:27.429631+00:00",
+      "status": "ok",
+      "found": 441,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 19.87
+    },
+    {
+      "source": "dunya",
+      "name": "Dünya",
+      "url": "https://www.dunya.com/",
+      "checked_at": "2026-10-12T19:37:27.429649+00:00",
+      "status": "ok",
+      "found": 25,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 20.29
+    },
+    {
+      "source": "turkiyegz",
+      "name": "Türkiye Gazetesi",
+      "url": "https://www.turkiyegazetesi.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429666+00:00",
+      "status": "ok",
+      "found": 373,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 16.87
+    },
+    {
+      "source": "oksijen",
+      "name": "Oksijen",
+      "url": "https://gazeteoksijen.com/",
+      "checked_at": "2026-10-12T19:37:27.429680+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://gazeteoksijen.com/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://gazeteoksijen.com/rss'"
+        },
+        {
+          "url": "https://gazeteoksijen.com/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://gazeteoksijen.com/feed'"
+        },
+        {
+          "url": "https://gazeteoksijen.com/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://gazeteoksijen.com/rss.xml'"
+        },
+        {
+          "url": "https://gazeteoksijen.com/rss/anasayfa.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://gazeteoksijen.com/rss/anasayfa.xml'"
+        }
+      ],
+      "seconds": 55.84
+    },
+    {
+      "source": "f5haber",
+      "name": "F5Haber",
+      "url": "https://www.f5haber.com/",
+      "checked_at": "2026-10-12T19:37:27.429759+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 20.5
+    },
+    {
+      "source": "haberler",
+      "name": "Haberler.com",
+      "url": "https://www.haberler.com/",
+      "checked_at": "2026-10-12T19:37:27.429786+00:00",
+      "status": "ok",
+      "found": 1000,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 30.95
+    },
+    {
+      "source": "milligazete",
+      "name": "Milli Gazete",
+      "url": "https://www.milligazete.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429807+00:00",
+      "status": "ok",
+      "found": 40,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 20.78
+    },
+    {
+      "source": "vatan",
+      "name": "Vatan",
+      "url": "https://www.gazetevatan.com/",
+      "checked_at": "2026-10-12T19:37:27.429820+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.gazetevatan.com/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.gazetevatan.com/rss'"
+        },
+        {
+          "url": "https://www.gazetevatan.com/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.gazetevatan.com/feed/'"
+        },
+        {
+          "url": "https://www.gazetevatan.com/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.gazetevatan.com/rss.xml'"
+        },
+        {
+          "url": "https://www.gazetevatan.com/rss/anasayfa.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.gazetevatan.com/rss/anasayfa.xml'"
+        }
+      ],
+      "seconds": 41.42
+    },
+    {
+      "source": "dirilis",
+      "name": "Diriliş Postası",
+      "url": "https://www.dirilispostasi.com/",
+      "checked_at": "2026-10-12T19:37:27.429836+00:00",
+      "status": "ok",
+      "found": 40,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 21.59
+    },
+    {
+      "source": "yeniasya",
+      "name": "Yeni Asya",
+      "url": "https://www.yeniasya.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429851+00:00",
+      "status": "ok",
+      "found": 100,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [
+        {
+          "url": "https://www.yeniasya.com.tr/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.yeniasya.com.tr/feed/'"
+        },
+        {
+          "url": "https://www.yeniasya.com.tr/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.yeniasya.com.tr/rss.xml'"
+        }
+      ],
+      "seconds": 33.26
+    },
+    {
+      "source": "artigercek",
+      "name": "Artı Gerçek",
+      "url": "https://artigercek.com/",
+      "checked_at": "2026-10-12T19:37:27.429866+00:00",
+      "status": "ok",
+      "found": 50,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 24.86
+    },
+    {
+      "source": "dha",
+      "name": "Demirören Haber Ajansı",
+      "url": "https://www.dha.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.429882+00:00",
+      "status": "ok",
+      "found": 2,
+      "new": 2,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.dha.com.tr/rss",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.dha.com.tr/rss'"
+        },
+        {
+          "url": "https://www.dha.com.tr/feed/",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.dha.com.tr/feed/'"
+        },
+        {
+          "url": "https://www.dha.com.tr/rss.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.dha.com.tr/rss.xml'"
+        },
+        {
+          "url": "https://www.dha.com.tr/rss/anasayfa.xml",
+          "error": "ClientResponseError: 404, message='Not Found', url='https://www.dha.com.tr/rss/anasayfa.xml'"
+        }
+      ],
+      "seconds": 29.16
+    },
+    {
+      "source": "yenicag",
+      "name": "Yeni Çağ",
+      "url": "https://www.yenicaggazetesi.com/",
+      "checked_at": "2026-10-12T19:37:27.429900+00:00",
+      "status": "ok",
+      "found": 97,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 22.23
+    },
+    {
+      "source": "instacp",
+      "name": "Instacp",
+      "url": "https://www.instacp.com/",
+      "checked_at": "2026-10-12T19:37:27.429913+00:00",
+      "status": "no_articles",
+      "found": 0,
+      "new": 0,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.instacp.com/",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.instacp.com/'"
+        },
+        {
+          "url": "https://www.instacp.com/rss",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.instacp.com/rss'"
+        },
+        {
+          "url": "https://www.instacp.com/feed/",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.instacp.com/feed/'"
+        },
+        {
+          "url": "https://www.instacp.com/rss.xml",
+          "error": "TimeoutError: "
+        },
+        {
+          "url": "https://www.instacp.com/rss/anasayfa.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.instacp.com/rss/anasayfa.xml'"
+        },
+        {
+          "url": "https://www.instacp.com/sitemap_news.xml",
+          "error": "TimeoutError: "
+        },
+        {
+          "url": "https://www.instacp.com/news-sitemap.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.instacp.com/news-sitemap.xml'"
+        },
+        {
+          "url": "https://www.instacp.com/sitemap.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.instacp.com/sitemap.xml'"
+        }
+      ],
+      "seconds": 94.2
+    },
+    {
+      "source": "gazetelerdebugun",
+      "name": "GazetelerdeBugün",
+      "url": "https://www.gazetelerdebugun.com/",
+      "checked_at": "2026-10-12T19:37:27.430710+00:00",
+      "status": "no_articles",
+      "found": 0,
+      "new": 0,
+      "methods": [
+        "html"
+      ],
+      "errors": [
+        {
+          "url": "https://www.gazetelerdebugun.com/",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/rss",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/rss'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/feed/",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/feed/'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/rss.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/rss.xml'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/rss/anasayfa.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/rss/anasayfa.xml'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/sitemap_news.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/sitemap_news.xml'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/news-sitemap.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/news-sitemap.xml'"
+        },
+        {
+          "url": "https://www.gazetelerdebugun.com/sitemap.xml",
+          "error": "ClientResponseError: 502, message='Bad Gateway', url='https://www.gazetelerdebugun.com/sitemap.xml'"
+        }
+      ],
+      "seconds": 80.56
+    },
+    {
+      "source": "tele1",
+      "name": "TELE1",
+      "url": "https://www.tele1.com.tr/",
+      "checked_at": "2026-10-12T19:37:27.430754+00:00",
+      "status": "ok",
+      "found": 40,
+      "new": 2,
+      "methods": [
+        "rss"
+      ],
+      "errors": [],
+      "seconds": 23.82
+    }
+  ]
+}
